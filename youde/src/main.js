@@ -5,6 +5,7 @@ import router from './configs/router'
 
 // 引入全局样式
 import './stylesheets/index.css'
+import './stylesheets/icon.css'
 
 Vue.config.productionTip = false
 
