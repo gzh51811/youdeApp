@@ -4,14 +4,14 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 import App from '../App'
-import Sort from '../pages/Sort'
 import Details from '../pages/Details'
 import Login from '../pages/Login'
 import Reg from '../pages/Reg'
 import Home from '../pages/Home'
-import List from '../pages/List'
+import Category from '../pages/Category'
 import Cart from '../pages/Cart'
 import Mine from '../pages/Mine'
+import List from '../pages/List'
 
 const routes = [
     {
@@ -24,9 +24,9 @@ const routes = [
                 component : Home
             },
             {
-                path : '/list',
-                name : 'list',
-                component : List
+                path : '/category',
+                name : 'category',
+                component : Category
             },
             {
                 path : '/cart',
@@ -41,9 +41,9 @@ const routes = [
         ]
     },
     {
-        path : '/sort',
-        name : 'sort',
-        component : Sort
+        path : '/list',
+        name : 'list',
+        component : List
     },
     {
         path : '/details',

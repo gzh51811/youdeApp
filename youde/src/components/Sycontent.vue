@@ -38,4 +38,7 @@
     .line{
         height:0.3em !important;
     }
+    section{
+        padding-bottom:50px;
+    }
 </style>
