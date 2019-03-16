@@ -20,6 +20,9 @@ Vue.use(VueLazyload, {
 import './stylesheets/index.css'
 import './stylesheets/icon.css'
 
+
+
+
 Vue.config.productionTip = false
 
 new Vue({

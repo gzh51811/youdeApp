@@ -9,6 +9,10 @@
 
 // 底部
 import Xfooter from './components/Xfooter.vue'
+import Vue from 'vue'
+
+import axios from "axios";
+Vue.prototype.$axios = axios;
 
     export default {
         name: 'app',

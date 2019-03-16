@@ -26,7 +26,7 @@ export default {
   },
   methods:{
     changepage(){
-        console.log(666);
+      
     }
   }
 }

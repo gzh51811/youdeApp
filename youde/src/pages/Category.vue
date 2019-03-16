@@ -1,10 +1,8 @@
 <template>
-  <div data-v-8f50877c class="container">
-    <Lheader></Lheader>
-    <div data-v-8f50877c>
+  <div>
+      <Lheader></Lheader>
       <Lleft></Lleft>
       <Lrigth></Lrigth>
-    </div>
   </div>
 </template> 
 <script>
