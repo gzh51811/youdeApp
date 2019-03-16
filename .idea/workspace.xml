@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22f76c70-75fb-434c-b9c3-7b97f2a9ab7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youde/src/components/Ssheader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/components/Ssheader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youde/src/components/Sybanner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/components/Sybanner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youde/src/components/Symiaosha.vue" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/components/Symiaosha.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youde/src/components/Sytoday.vue" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/components/Sytoday.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youde/src/components/Syheader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/components/Syheader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youde/src/configs/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/configs/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youde/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/youde/src/pages/Home.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,28 +32,28 @@
         <counts>
           <entry key="Wdmyassets" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="4" />
-          <entry key="vue" value="51" />
+          <entry key="js" value="6" />
+          <entry key="vue" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="4" />
+          <entry key="JavaScript" value="6" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="Vue.js" value="51" />
+          <entry key="Vue.js" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="143" />
-          <entry key="vue" value="9663" />
+          <entry key="vue" value="10715" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="143" />
-          <entry key="Vue.js" value="9663" />
+          <entry key="Vue.js" value="10715" />
         </counts>
       </usages-collector>
     </session>
@@ -62,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youde/src/pages/Search.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="247">
               <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
                 <element signature="e#87#132#0" expanded="true" />
@@ -72,23 +73,60 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/youde/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#461#493#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/youde/src/configs/router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#79#103#0" expanded="true" />
+                <element signature="e#505#1023#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youde/src/components/Ssheader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="228">
+              <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/youde/src/components/Sytoday.vue">
+        <entry file="file://$PROJECT_DIR$/youde/src/pages/List.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="8" column="138" selection-start-line="8" selection-start-column="138" selection-end-line="8" selection-end-column="138" />
+            <state relative-caret-position="247">
+              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1717#2628#0" />
+                <element signature="e#222#270#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/youde/src/pages/Home.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding>
+                <element signature="e#119#164#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/youde/src/components/Syheader.vue" />
-        <option value="$PROJECT_DIR$/youde/src/pages/Home.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/Symenu.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/SynewPeople.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/Syhaibao.vue" />
@@ -137,13 +173,16 @@
         <option value="$PROJECT_DIR$/youde/src/pages/Reg.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/Zccontent.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/Dlloginform.vue" />
-        <option value="$PROJECT_DIR$/youde/src/configs/router.js" />
         <option value="$PROJECT_DIR$/youde/src/components/Sscontainer.vue" />
         <option value="$PROJECT_DIR$/youde/src/pages/Search.vue" />
-        <option value="$PROJECT_DIR$/youde/src/components/Ssheader.vue" />
-        <option value="$PROJECT_DIR$/youde/src/components/Sybanner.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/Symiaosha.vue" />
         <option value="$PROJECT_DIR$/youde/src/components/Sytoday.vue" />
+        <option value="$PROJECT_DIR$/youde/src/pages/Home.vue" />
+        <option value="$PROJECT_DIR$/youde/src/components/Sytotop.vue" />
+        <option value="$PROJECT_DIR$/youde/src/components/Sybanner.vue" />
+        <option value="$PROJECT_DIR$/youde/src/configs/router.js" />
+        <option value="$PROJECT_DIR$/youde/src/components/Syheader.vue" />
+        <option value="$PROJECT_DIR$/youde/src/components/Ssheader.vue" />
       </list>
     </option>
   </component>
@@ -265,12 +304,12 @@
       <workItem from="1552619603716" duration="7718000" />
       <workItem from="1552633017645" duration="20575000" />
       <workItem from="1552697613212" duration="5536000" />
-      <workItem from="1552703491125" duration="8578000" />
+      <workItem from="1552703491125" duration="13488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42407000" />
+    <option name="totallyTimeSpent" value="47317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -302,13 +341,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/youde/src/pages/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youde/src/components/SynewPeople.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -341,13 +373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youde/src/components/Syheader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -576,28 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youde/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#461#493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youde/src/configs/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#79#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youde/src/components/Zccontent.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -631,26 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youde/src/pages/Search.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="e#87#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youde/src/components/Sybanner.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="95" lean-forward="true" selection-start-line="14" selection-start-column="95" selection-end-line="14" selection-end-column="95" />
-          <folding>
-            <element signature="e#1492#2518#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youde/src/components/Symiaosha.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
@@ -664,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youde/src/components/Ssheader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youde/src/components/Sytoday.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -679,6 +655,90 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#1717#2628#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/pages/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#119#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/pages/Search.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#87#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#461#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/configs/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#79#103#0" expanded="true" />
+            <element signature="e#505#1023#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/components/Syheader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="2001" lean-forward="true" selection-start-line="8" selection-start-column="2001" selection-end-line="8" selection-end-column="2001" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#header#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/components/Sybanner.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="66" lean-forward="true" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/components/Sytotop.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="71" lean-forward="true" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/components/Ssheader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youde/src/pages/List.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding>
+            <element signature="e#222#270#0" expanded="true" />
           </folding>
         </state>
       </provider>

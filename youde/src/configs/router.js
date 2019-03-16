@@ -66,7 +66,6 @@ const routes = [
         name : 'search',
         component : Search
     }
-
 ];
 
 const router = new VueRouter({

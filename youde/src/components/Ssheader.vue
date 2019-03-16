@@ -8,7 +8,7 @@
         <div data-v-0f11067f="" class="button-wrapper" style="">
             <a data-v-0f11067f="" class="search-btn cancel-btn" :class="{
             blue : blue
-            }" >{{btnTitle}}</a>
+            }" @click="goto">{{btnTitle}}</a>
         </div>
     </div>
 </template>
@@ -32,6 +32,13 @@
                 this.btnTitle = '取消';
                 this.blue = false;
                 this.$refs.ipt.value = '';
+            },
+            goto(){
+                if(this.blue){
+                    this.$router.push({name:'list'});
+                }else{
+                    this.$router.back();
+                }
             }
         },
         mounted(){

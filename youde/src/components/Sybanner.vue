@@ -11,7 +11,7 @@
                         'transition-duration': '200ms'}">
                     <div data-v-0f5990e2="" class="swiper-slide" :style="{width:`${screenWidth}px`}" v-for="(b,idx) in bannerList"
                          :key="idx">
-                        <a data-v-0f5990e2="" href="https://special.youde.com/20190313/e13ed381.html">
+                        <a data-v-0f5990e2="" href="javascript:;">
                             <img data-v-0f5990e2="" :style="{width:screenWidth,height:'175px'}"
                                  :src="b.src">
                         </a>
