@@ -45,10 +45,10 @@
                             <div data-v-0f5990e2="" class="killItemImg">
                                 <img data-v-0f5990e2="" alt="" class="killImg" v-lazy="item.src"
                                      style="width:64px;height:60px;">
+                                <p data-v-0f5990e2="" class="msGoods-title"
+                                   style="width:93.33px;height:20px;line-height:20px;">{{item.title}}</p>
                             </div>
-                            <p data-v-0f5990e2="" class="msGoods-title"
-                               style="width:93.33px;height:20px;line-height:20px;">{{item.title}}</p></div>
-
+                        </div>
                     </div>
                 </div>
             </div>

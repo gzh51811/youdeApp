@@ -1,7 +1,7 @@
 <template>
     <div class="cartWrap">
-        <GwcHeader></GwcHeader>
-        <Gwccontent></Gwccontent>
+        <GwcHeader :changeBtn="changeBtn" :btnStatus="btnStatus"></GwcHeader>
+        <Gwccontent :btnStatus="btnStatus"></Gwccontent>
     </div>
 </template>
 <script>
@@ -9,6 +9,16 @@
     import Gwccontent from '../components/Gwccontent'
 
     export default {
+        data(){
+            return {
+                btnStatus : false
+            }
+        },
+        methods:{
+            changeBtn(){
+                this.btnStatus = !this.btnStatus;
+            }
+        },
         components : {
             GwcHeader,
             Gwccontent

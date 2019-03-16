@@ -32,15 +32,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div data-v-35c3340a="" class="listItemBtm">-->
-                        <!--<ul data-v-35c3340a="">-->
-                            <!--<li data-v-35c3340a="" data-id="392e884b01164a369df58084499938ba">-->
-                                <!--<i data-v-35c3340a="">满99包邮</i>-->
-                                <!--<span data-v-35c3340a=""> 去凑单</span>-->
-                                <!--<em data-v-35c3340a="">修改</em>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
                 </li>
             </ul>
         </div>
@@ -53,30 +44,18 @@
                     合计：<strong data-v-35c3340a="">0.00</strong>
                 </p>
             </div>
-            <div data-v-35c3340a="" class="cartFixedRight">
-                <span data-v-35c3340a="">结算</span>
+            <div data-v-35c3340a="" class="cartFixedRight" :class="{
+            bgRed : btnStatus
+            }">
+                <span data-v-35c3340a="">{{btnStatus ? '删除' : '结算'}}</span>
             </div>
         </div>
-        <!--<div data-v-46185b23="" data-v-35c3340a="" class="popupContainer">-->
-            <!--<div data-v-46185b23="" class="shadowLayer"></div>-->
-            <!--<div data-v-46185b23="" class="popupWrap">-->
-                <!--<div data-v-46185b23="" class="popupHeader">-->
-                    <!--修改促销-->
-                    <!--<em data-v-46185b23="" class="closeBtn"></em>-->
-                <!--</div>-->
-                <!--&lt;!&ndash;<div data-v-35c3340a="" data-v-46185b23="" class="promotionList">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<ul data-v-35c3340a="" data-v-46185b23="">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<li data-v-35c3340a="" data-v-46185b23="">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<span data-v-35c3340a="" data-v-46185b23="">满99包邮</span>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
 </template>
 <script>
-
+    export default {
+        props : ['btnStatus']
+    }
 </script>
 <style scoped>
     .cartTitle {
@@ -90,5 +69,19 @@
 
     .cartWrap .listItemContainer .goodsRight {
         width: 3.6rem !important;
+    }
+
+    .cartWrap label {
+        background: url('../assets/checkIcon.a368a5c.png') no-repeat !important;
+        background-position: -10px 0px !important;
+        /*红色部分Y轴-58*/
+    }
+
+    .cartFixedBtm .cartFixedRight {
+        width:110px !important;
+    }
+
+    .cartFixedBtm .cartFixedRight span{
+        margin-right:35px;
     }
 </style>

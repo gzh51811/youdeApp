@@ -12,6 +12,7 @@ import Category from '../pages/Category'
 import Cart from '../pages/Cart'
 import Mine from '../pages/Mine'
 import List from '../pages/List'
+import Search from '../pages/Search'
 
 const routes = [
     {
@@ -59,6 +60,11 @@ const routes = [
         path : '/reg',
         name : 'reg',
         component : Reg
+    },
+    {
+        path : '/search',
+        name : 'search',
+        component : Search
     }
 
 ];
