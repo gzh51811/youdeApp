@@ -1,4 +1,5 @@
 <template>
+<div>
   <ul data-v-27ebe30a class="tab">
         <li data-v-27ebe30a class>新品</li>
         <li data-v-27ebe30a class="active">销量</li>
@@ -6,12 +7,13 @@
     <span data-v-27ebe30a class="icon iconfont icon-asc"></span>
     </li>
   </ul>
+</div>
 </template>
 <script>
 export default {
     data(){
         return{
-
+        
         }
     },
 
@@ -21,5 +23,6 @@ export default {
 span{
     float: none
 }
+
 </style>
 

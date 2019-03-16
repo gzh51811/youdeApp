@@ -4,7 +4,6 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 import App from '../App'
-import Sort from '../pages/Sort'
 import Details from '../pages/Details'
 import Login from '../pages/Login'
 import Reg from '../pages/Reg'
@@ -25,13 +24,9 @@ const routes = [
                 component : Home
             },
             {
-                path : '/Category',
-                name : 'Category',
+                path : '/category',
+                name : 'category',
                 component : Category
-            },{
-                path : '/List',
-                name : 'List',
-                component : List
             },
             {
                 path : '/cart',
@@ -46,9 +41,9 @@ const routes = [
         ]
     },
     {
-        path : '/sort',
-        name : 'sort',
-        component : Sort
+        path : '/list',
+        name : 'list',
+        component : List
     },
     {
         path : '/details',

@@ -1,12 +1,12 @@
 <template>
-     <div data-v-27ebe30a class="container">
+     <div>
            <Lheader></Lheader>
-        <div data-v-27ebe30a class="wrapper">
+          <div data-v-27ebe30a class="wrapper">
             <Lsort></Lsort>
-            <Listgoods></Listgoods>
-        </div>
+             <Listgoods></Listgoods>
+         </div>
     </div>
-   
+     
 </template>
 <script>
 
@@ -26,3 +26,6 @@ export default {
     }
 }
 </script>
+<style>
+
+</style>

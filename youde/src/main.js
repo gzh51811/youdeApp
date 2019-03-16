@@ -7,6 +7,9 @@ import router from './configs/router'
 import './stylesheets/index.css'
 import './stylesheets/icon.css'
 
+
+
+
 Vue.config.productionTip = false
 
 new Vue({
