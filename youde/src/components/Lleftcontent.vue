@@ -8,61 +8,28 @@
       <li
         data-v-8f50877c
         :class ="{active:idx == active}"
-        style="pointer-events: auto;"
-        v-for="(list,idx) in lists"
-        :key="list.goodsname"
+        v-for="(list,idx) in category"
+        :key="list.name"
         @click="show(idx)"
-      >{{list.goodsname}}</li>
+      >{{list.name}}</li>
     </ul>
   </div>
 </template>
 <script>
 export default {
+  props:["category","changeidx"],
   data() {
     return {
-      lists: [
-        {
-          goodsname: "医疗健康器材",
-          
-        },
-        {
-          goodsname: "中西成药"
-        },
-        {
-          goodsname: "养生中药"
-        },
-        {
-          goodsname: "全球购"
-        },
-        {
-          goodsname: "健康食品"
-        },
-        {
-          goodsname: "普通食品"
-        },
-        {
-          goodsname: "生活用品"
-        },
-        {
-          goodsname: "厨房大全"
-        },
-        {
-          goodsname: "个人护理品"
-        },
-        {
-          goodsname: "美容瘦身"
-        },
-        {
-          goodsname: "会员日"
-        }
-      ],
+   
       active: 0
+     
     };
   },
   methods: {
     show(idx) {
-      this.active = idx;
-      
+      // console.log(idx);
+      this.active = idx; 
+      this.$emit("changeidx",idx);     
     }
   }
 };

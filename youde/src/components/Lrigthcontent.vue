@@ -1,60 +1,26 @@
 <template>
-  <div class="scroll-list">
-    <div class="list-rigth">
-      <p class="names">花茶</p>
+  <div class="scroll-list" v-if="goodslit.length > 0">
+    <div class="list-rigth" v-for ="classify in goodslit[num].leaf" :key="classify.id">
+        <p class="names" >{{classify.name}}</p>
+     
       <div class="item-list clearfix">
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
+         <div class="item-goods" v-for="item in classify.leaf" :key="item.id" @click="gotolist">
+          <img :src="item.cover">
+          <p>{{item.name}}</p>
         </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-      </div>
-       <p class="names">红茶</p>
-      <div class="item-list clearfix">
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-      </div>
-       <p class="names">黑茶</p>
-      <div class="item-list clearfix">
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-        <div class="item-goods">
-          <img src>
-          <p>花茶</p>
-        </div>
-      </div>
     </div>
+  </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props:["goodslit","num"],
+  methods:{
+    gotolist(){
+       this.$router.push({name:"list"});   
+    }
+  }
+};
 </script>
 
 <style scoped>

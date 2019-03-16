@@ -1,6 +1,6 @@
 <template>
   <header data-v-916e8b0c class="gHeader clearfix">
-    <div data-v-916e8b0c class="f_logo">
+    <div data-v-916e8b0c class="f_logo" @click="back">
       <i data-v-916e8b0c class="icon iconfont icon-back" style="color: rgb(88, 89, 89);"></i>
     </div>
     <div data-v-916e8b0c class="search-wrapper">
@@ -25,9 +25,9 @@ export default {
     }
   },
   methods:{
-    changepage(){
-      
-    }
+   back(){
+     this.$router.back();
+   }
   }
 }
 </script>

@@ -44,7 +44,8 @@ export default {
         
           this.splist = datas
       });
-  }
+  },
+ 
 
 };
 </script>

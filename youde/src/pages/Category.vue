@@ -1,8 +1,8 @@
 <template>
   <div>
-      <Lheader></Lheader>
-      <Lleft></Lleft>
-      <Lrigth></Lrigth>
+    <Lheader></Lheader>
+    <Lleft :category ="category" v-on:changeidx ="changeidx"></Lleft>
+    <lrigth :goodslit="category" :num="num"></Lrigth>
   </div>
 </template> 
 <script>
@@ -10,18 +10,31 @@ import Lheader from "../components/Lheader.vue";
 import Lleft from "../components/Lleftcontent.vue";
 import Lrigth from "../components/Lrigthcontent.vue";
 
-
 export default {
-  data(){
-    return{
-      isok:true
-    }
+  data() {
+    return {
+      category:[],
+      num:0
+    };
   },
   components: {
     Lheader,
     Lleft,
     Lrigth
-  }
+  },
+  created() {
+    this.$axios.get("http://localhost:3000/classfiy", {}).then(res => {
+       console.log(res.data[0].data);
+       var classfiy = res.data[0].data
+       this.category = classfiy
+    });
+  },
+ methods:{
+   changeidx(idx){
+      this.num = idx
+      
+   }  
+ }
 };
 </script>
 <style scoped>

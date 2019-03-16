@@ -65,6 +65,7 @@
                 this.$router.push({name});
             }
         }
+
     }
 </script>
 <style scoped>
