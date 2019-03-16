@@ -6,9 +6,9 @@
         </div>
         <div data-v-0f5990e2="" class="jr-link">
             <div data-v-023ac5c2="" data-v-0f5990e2=""
-                 class="swiper-container swiper-container-horizontal swiper-container-autoheight swiper-container-ios">
+                 class="swiper-container swiper-container-horizontal swiper-container-autoheight swiper-container-ios" style="width:200px;">
                 <div class="swiper-wrapper"
-                     :style="{width: '600px',
+                     :style="{width: '800px',
                      transform: `translate3d(${distance}, 0px, 0px)`,
                       'transition-duration': '0ms',
                        height: '62px'}">
@@ -59,6 +59,9 @@
             }
         },
         computed:{
+            getWidth(){
+                return document.documentElement.clientWidth;
+            },
             distance(){
                 return this.cur * (-1) * 200 + 'px';
             }

@@ -5,14 +5,14 @@
              @touchstart="clearInt" @touchend="setInt">
             <v-touch v-on:swipeleft="left" v-on:swiperight="right">
                 <div class="swiper-wrapper"
-                     :style="{width: '1920px',
+                     :style="{width: `${bigBox}px`,
                       transform: `translate3d(${distance}, 0px, 0px)`,
                        height: '181px',
                         'transition-duration': '200ms'}">
-                    <div data-v-0f5990e2="" class="swiper-slide" style="width: 320px;" v-for="(b,idx) in bannerList"
+                    <div data-v-0f5990e2="" class="swiper-slide" :style="{width:`${screenWidth}px`}" v-for="(b,idx) in bannerList"
                          :key="idx">
                         <a data-v-0f5990e2="" href="https://special.youde.com/20190313/e13ed381.html">
-                            <img data-v-0f5990e2=""
+                            <img data-v-0f5990e2="" :style="{width:screenWidth,height:'175px'}"
                                  :src="b.src">
                         </a>
                     </div>
@@ -64,7 +64,13 @@
         },
         computed: {
             distance() {
-                return this.curIdx * 320 * (-1) + 'px'
+                return this.curIdx * this.screenWidth * (-1) + 'px'
+            },
+            screenWidth(){
+                return document.documentElement.clientWidth;
+            },
+            bigBox(){
+                return this.screenWidth * this.bannerList.length;
             }
         },
         methods: {
@@ -91,8 +97,8 @@
                 }
             },
             //封装轮播图定时器
-            bannerInterval(){
-                this.bannerTimer = setInterval(()=>{
+            bannerInterval() {
+                this.bannerTimer = setInterval(() => {
                     this.curIdx++;
                     if (this.curIdx > 5) {
                         this.curIdx = 0;
@@ -101,22 +107,26 @@
                     if (this.cur < 0) {
                         this.cur = 5;
                     }
-                },2000)
+                }, 2000)
             },
             //手指触摸清除定时器
-            clearInt(){
+            clearInt() {
                 clearInterval(this.bannerTimer);
             },
             //触摸结束设置定时器
-            setInt(){
+            setInt() {
                 this.bannerInterval();
+            },
+            getWidth() {
+               console.log(document.documentElement.clientWidth)
             }
         },
         mounted() {
             //开启定时器
             this.bannerInterval();
+            this.getWidth();
         },
-        destroyed(){
+        destroyed() {
             //销毁时 清除定时器
             clearInterval(this.bannerTimer);
         }

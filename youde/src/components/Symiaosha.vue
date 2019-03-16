@@ -31,12 +31,12 @@
                 <div data-v-023ac5c2="" data-v-0f5990e2=""
                      class="swiper-container swiper-container-horizontal swiper-container-autoheight swiper-container-ios">
                     <div class="swiper-wrapper"
-                         :style="{width: '2686.67px',
+                         :style="{width: `${bigBox}px`,
                           height: '79px',
                            transform: `translate3d(${distance}, 0px, 0px)`,
                           'transition-duration': '200ms'}">
                         <div data-v-0f5990e2="" class="slider-item msGoods swiper-slide swiper-slide-duplicate"
-                             data-swiper-slide-index="17" style="width: 93.3333px; margin-right: 10px;height:79px;"
+                             data-swiper-slide-index="17" :style="{width: `${geziWidth}px`,'margin-right': '10px',height:'79px'}"
                              v-for="(item,idx) in itemList" :key="idx">
                             <div data-v-0f5990e2="" class="msGoods-text">
                                 <span data-v-0f5990e2="">￥{{item.newPrice}}</span><br>
@@ -204,8 +204,21 @@
             }
         },
         computed: {
+            //获取屏幕宽度
+            getWidth(){
+                return document.documentElement.clientWidth;
+            },
+            //每一格的宽度为 屏幕宽度 - 20 - 20 再 除以3
+            //小格宽度
+            geziWidth(){
+                return (this.getWidth - 40) / 3;
+            },
+            //大盒子宽度
+            bigBox(){
+                return this.itemList.length * this.geziWidth + (this.itemList.length - 1) * 10;
+            },
             distance() {
-                return this.cur * (-1) * 103.3333 + 'px';
+                return this.cur * (-1) * (this.geziWidth + 10) + 'px';
             },
             countdown() {
                 let d = new Date('2019/3/25');
