@@ -8,7 +8,7 @@
         <div data-v-0f11067f class="input-wrapper">
           <span data-v-0f11067f class="icon iconfont icon-search"></span>
           <span data-v-0f11067f class="icon iconfont icon-close-b" style="display: none;"></span>
-          <input data-v-0f11067f placeholder="搜索商品" @click="changepage">
+          <input data-v-0f11067f placeholder="搜索商品">
         </div>
         <div data-v-0f11067f class="button-wrapper" style="display: none;">
           <a data-v-0f11067f class="search-btn cancel-btn">取消</a>
