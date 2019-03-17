@@ -12,7 +12,7 @@ const mongodb = require('mongodb');
 
 const MongoClient = mongodb.MongoClient;
 
-const database_url = 'mongodb://localhost:27017';
+const database_url = 'mongodb://10.3.137.157:27017';
 const database_name = 'youde';
 
 async function connect(){

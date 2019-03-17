@@ -7,7 +7,7 @@ router.get('/',async function(req, res, next) {
   //查询所有数据
     let str = await db.find("category",{});
     
-  res.send(str);
+   res.send(str);
 });
 
 module.exports = router;

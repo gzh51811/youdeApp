@@ -1,23 +1,21 @@
 <template>
   <div class="scroll-list">
         <ul class="list">
-            <li class="list-app" v-for="item in splist" :key="item.id">
+            <li class="list-app" v-for="item in splist" :key="item._id">
                 <a>
                     <div class="box">
                         <div class="lefts">
-                          <img :src="item.thumbnail" >
+                          <img :src="item.data.thumbnail" >
                         </div>
                         <div class="rigths">
-                            <span class="spname">{{item.title}}</span><br>
-                            <span class="sprice">￥{{item.maxPrice/100}}</span><br>
+                            <span class="spname">{{item.data.title}}</span><br>
+                            <span class="sprice">￥{{item.data.maxPrice/100}}</span><br>
                             <span class="spsite">自营</span>
                         </div>
                     </div>
                 </a>
             </li>
-
         </ul>
-     
       <div data-v-6b1dde78 data-v-27ebe30a class="go-top-wrapper" style="display: none;">
         <i data-v-6b1dde78 class="icon iconfont icon-top"></i>
       </div>
@@ -31,20 +29,11 @@
 </template>
 <script>
 export default {
+  props:["splist"],
   data(){
     return{
-        splist:[]
     }
-  },
-  created(){
-      this.$axios.get("http://localhost:3000/list",{
-
-      }).then(res=>{
-          let datas = res.data;
-        
-          this.splist = datas
-      });
-  },
+  }
  
 
 };

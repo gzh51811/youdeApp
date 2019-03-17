@@ -4,9 +4,11 @@ let db = require('../public/javascripts/index.js');
 
 /* GET users listing. */
 router.get('/',async function(req, res, next) {
+    let{goodsId}=req.query
+    console.log(goodsId);
   //查询所有数据
-    let str = await db.find("goods",{});
-    
+    let str = await db.find("goods",{"data.id" : goodsId});
+
   res.send(str);
 });
 
