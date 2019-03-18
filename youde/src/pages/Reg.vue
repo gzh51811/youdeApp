@@ -12,6 +12,11 @@
         components : {
             Xheader,
             Zccontent
-        }
+        },
+        // created(){
+        //      this.$axios.post("http://localhost:3000/reg",{
+                
+        //     })
+        // }
     }
 </script>
