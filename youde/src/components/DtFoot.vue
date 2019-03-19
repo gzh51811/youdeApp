@@ -10,7 +10,7 @@
             <li @click="goPurchese"> 
                 <p style="position:absolute;left:2.2rem;top:4px;background:red;height:12px;
                           width:12px;line-height:12px;text-align:center;border-radius:3px;font-size:10px;
-                          border:1px solid red;border-radius:50%;color: white!important;">{{kinds ? kinds.length : 0}}</p>
+                          border:1px solid red;border-radius:50%;color: white!important;">{{cartlist ? cartlist.length : 0}}</p>
                 <i class="icon iconfont icon-add_cart"></i>
                 <p style="font-size:10px">购物车</p>
             </li>
@@ -31,13 +31,7 @@
 <script>
 import qs from "qs";
 export default {
-
-  computed : {
-      kinds(){
-        return this.$store.getters.getgoodslist;
-      }
-  },
- 
+  
   methods: {
     purchese(){
 
@@ -74,7 +68,15 @@ export default {
           this.$store.dispatch("setcartlist",data)
         })
       }
+    },
+
+    computed : {
+      cartlist(){
+           return this.$store.getters.getgoodslist;
+      }
     }
+
+ 
   }
 
 </script>

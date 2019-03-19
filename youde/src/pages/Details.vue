@@ -16,7 +16,8 @@ import Dtgoods from '../components/Dtgoods.vue';
 import DtInfo from '../components/DtInfo.vue';
 import DtCom from '../components/DtCom.vue';
 import DtFoot from '../components/DtFoot.vue';
-import DtZhezao from '../components/DtZhezao.vue'
+import DtZhezao from '../components/DtZhezao.vue';
+import qs from 'qs';
 
 export default {
 
@@ -39,24 +40,36 @@ export default {
     created(){
         var {goodsId} = this.$route.query;
         var _this = this;
-        // console.log(goodsId);
         this.$axios.get('http://localhost:3000/goodsDetail',{
             params:{
                 goodsId
             }
         }).then(function(res){
 
-            //可取消
-            // console.log(res.data[0].data);
-
             _this.$store.commit('updateDetailInfo',res.data[0].data);
             if(res.data[0]){
                 _this.$store.commit('updateDetailInfo',res.data[0].data);
             }
-
         }).catch(function(error){
             console.log("error : " + error);
+        });
+
+
+        let username =  localStorage.getItem("username");
+
+        this.$axios.post("http://localhost:3000/cart/cartlist",
+            qs.stringify({
+                username
+            })
+        
+        
+        ).then(res=>{
+        
+            this.$store.dispatch('setgoodslist',res.data);
+
         })
+
+
     }
 }
 </script>
