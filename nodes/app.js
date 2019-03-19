@@ -11,6 +11,7 @@ var classfiyRouter = require('./routes/classfiy');
 var goodsDetailRouter = require('./routes/goodsDetail');
 var regRouter = require('./routes/reg');
 var loginRouter = require('./routes/login');
+var cartRouter = require('./routes/cart');
 var app = express();
 
 // view engine setup
@@ -35,6 +36,7 @@ app.use('/classfiy', classfiyRouter);
 app.use('/goodsDetail', goodsDetailRouter);
 app.use('/reg', regRouter);
 app.use('/login', loginRouter);
+app.use('/cart', cartRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
