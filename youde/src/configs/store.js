@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { stat } from 'fs';
+// import { stat } from 'fs';
 
 Vue.use(Vuex);
 
@@ -11,6 +11,10 @@ const store = new Vuex.Store({
 
         //详情页数据
         detailInfo : '',
+          
+        //购物车  
+        cartlist:[],
+        goodslist:[]
     },
     getters:{
 
@@ -45,8 +49,13 @@ const store = new Vuex.Store({
             }
 
 
+        },
+        getcartlist(state){
+            return state.cartlist
+        },
+        getgoodslist(state){
+            return state.goodslist
         }
-
     },
     mutations:{
 
@@ -58,11 +67,22 @@ const store = new Vuex.Store({
         //更新详情页数据
         updateDetailInfo(state,payload){
             this.state.detailInfo = payload;
-        }
+        },
+        updatecartlist(state,payload){
+            state.cartlist = payload;
+        },
+        updategoodslist(state,payload){
+            state.goodslist = payload;
+        }      
 
     },
     actions:{
-
+        setcartlist(context,payload){
+            context.commit("updatecartlist",payload);
+        },
+        setgoodslist(context,payload){
+            context.commit("updategoodslist",payload);
+        }
     }
 });
 

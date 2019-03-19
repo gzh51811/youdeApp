@@ -6,7 +6,7 @@
                 <div data-v-38a122bc="" class="userImg">
                     <img data-v-38a122bc="" src="../assets/headImg.e7eb358.png" alt="">
                 </div>
-                <div data-v-38a122bc="" class="userName">昵称</div>
+                <div data-v-38a122bc="" class="userName">{{nicheng}}</div>
             </div>
             <div data-v-38a122bc="" class="fr signIn">
                 <div data-v-38a122bc="">
@@ -17,3 +17,14 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    props:["nicheng"],
+    data(){
+        return{
+
+        }
+    },
+
+}
+</script>

@@ -30,7 +30,7 @@
                 </li>
                 <li data-v-463f1e5b @click="goto('cart')">
           <span data-v-463f1e5b class="bar-img relative">
-            <em data-v-463f1e5b class="shopcar_num">0</em>
+            <em data-v-463f1e5b class="shopcar_num">{{cartlist?cartlist.length:0}}</em>
             <i data-v-463f1e5b class="icon iconfont icon-add_cart" :class="{
             active : isOn === 'cart'
             }"></i>
@@ -55,9 +55,17 @@
 </template>
 <script>
     export default {
+        data(){
+            return{
+
+            }
+        },
         computed: {
             isOn() {
                 return this.$route.name;
+            },
+            cartlist(){
+                return this.$store.getters.getgoodslist;
             }
         },
         methods: {

@@ -1,7 +1,7 @@
 <template>
   <div class="scroll-list">
         <ul class="list">
-            <li class="list-app" v-for="item in splist" :key="item._id">
+            <li class="list-app" v-for="item in splist" :key="item._id" @click="gotoDetails(item.data.id)">
                 <a>
                     <div class="box">
                         <div class="lefts">
@@ -32,6 +32,11 @@ export default {
   props:["splist"],
   data(){
     return{
+    }
+  },
+  methods:{
+    gotoDetails(id){
+      this.$router.push({name:"details",query:{goodsId:id}});
     }
   }
  

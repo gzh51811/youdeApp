@@ -1,7 +1,7 @@
 <template>
     <div data-v-0f5990e2="" class="menu">
         <ul data-v-0f5990e2="" class="ind_navi clearfix">
-            <li data-v-0f5990e2="" v-for="(m,idx) in menuList" :key="idx">
+            <li data-v-0f5990e2="" v-for="(m,idx) in menuList" :key="idx" @click="gotolist">
                 <a data-v-0f5990e2="">
                     <i data-v-0f5990e2="">
                         <img data-v-0f5990e2="" :src="m.src">
@@ -58,6 +58,11 @@
                         title : '积分商城'
                     }
                 ]
+            }
+        },
+        methods:{
+            gotolist(){
+                this.$router.push({name:"list"});
             }
         }
     }

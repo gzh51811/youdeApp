@@ -34,9 +34,19 @@
     import Wdloginout from './Wdloginout'
 
     export default {
+        props:["nicheng"],
         data(){
             return {
-                flag : true
+               
+            }
+        },
+        computed:{
+            flag(){
+                if(this.nicheng){
+                    return true
+                }else{
+                    return false
+                }
             }
         },
         components: {

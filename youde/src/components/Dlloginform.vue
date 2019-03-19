@@ -63,9 +63,10 @@ export default {
             }
           }).then(res => {
                 if(res.data == "yes"){
-                    this.$router.push({name:"mine"});
-                    // console.log(res.config.params.username);
-                    localStorage.setItem('username',res.config.params.username);       
+                    // this.$router.push({name:"mine"});
+                    this.$router.back();
+                    localStorage.setItem('username',res.config.params.username);
+
                 }else{
                   this.isok = true;
                   this.text = "用户名或密码错误";    

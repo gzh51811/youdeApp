@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <router-view></router-view>
-        <Xfooter></Xfooter>
+        <Xfooter :cartlist="cartlist"></Xfooter>
     </div>
 </template>
 
@@ -9,16 +9,36 @@
 
 // 底部
 import Xfooter from './components/Xfooter.vue'
-import Vue from 'vue'
-
-import axios from "axios";
-Vue.prototype.$axios = axios;
+import qs from "qs"
 
     export default {
         name: 'app',
+        data(){
+            return{
+                cartlist:[]
+            }
+        },
         components: {
             Xfooter
+        },
+        created(){
+            let username =  localStorage.getItem("username");
+
+            this.$axios.post("http://localhost:3000/cart/cartlist",
+                qs.stringify({
+                    username
+                })
+            
+            
+            ).then(res=>{
+            
+                    this.$store.dispatch('setgoodslist',res.data);
+                   this.cartlist = this.$store.getgoodslist;
+                })
+
+
         }
+
     }
 </script>
 
