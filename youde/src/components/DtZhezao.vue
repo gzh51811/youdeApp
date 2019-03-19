@@ -46,13 +46,19 @@
                 <p style="padding-left:8px;">规格</p><br>
                 <p style="padding:4px 10px;border:1px solid #ccc;
                 margin-left:10px;"
-                >{{contents.specValue}}</p>
+                >{{contents.specValue}}</p><br><br>
+
+                <button style="margin-left:2.4rem;width:4rem;text-align:center;
+                        border-radius:6px;background:#58bc58;color:white;"
+                        @click='check'>提交</button>
             </div>
         </div>
 
     </div>
 </template>
 <script>
+import qs from 'qs';
+
 export default {
     data(){
         return {
@@ -78,6 +84,19 @@ export default {
     
 
     methods : {
+        check(){
+            this.$axios.post('http://localhost:3000/cart',
+                    qs.stringify({
+                    nums : this.num,
+                    username :localStorage.getItem('username'),
+                    goodsId : this.$route.query.goodsId
+                    })
+            ).then(res => {
+                this.close();
+            });
+
+        },
+
         close(){
             this.$store.commit('updateCode',{
                     code : 2,

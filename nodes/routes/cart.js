@@ -5,15 +5,15 @@ let db = require('../public/javascripts/index.js');
 
 /* GET home page. */
 router.post('/', async function(req, res, next) {
-    let{goodsId,username}=req.body
+    let{goodsId,username,nums}=req.body
 
     let list = await db.find("cart",{goodsId,username});
     if(list.length>0){
         // console.log(666)
-       let qty = list[0].qty + 1;     
+       let qty = list[0].qty*1 + nums*1;     
         let addqty = await db.update("cart",{goodsId,username},{qty});
     }else{
-        let addlist = await db.insert("cart",{goodsId,username,"qty":1});
+        let addlist = await db.insert("cart",{goodsId,username,"qty":nums});
     }
     let list2 = await db.find("cart",{username});
     let idlist =[]

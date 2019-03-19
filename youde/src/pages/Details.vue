@@ -40,7 +40,7 @@ export default {
         var {goodsId} = this.$route.query;
         var _this = this;
         // console.log(goodsId);
-        this.$axios.get('http://10.3.137.157:3000/goodsDetail',{
+        this.$axios.get('http://localhost:3000/goodsDetail',{
             params:{
                 goodsId
             }
