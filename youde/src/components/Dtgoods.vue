@@ -55,11 +55,6 @@
         </div>
 
         <dt-com></dt-com>
-        
-
-        <div class="cl">
-            <dt-zhezao :contents='zezhaoCon1' v-on:myevent="doSomething"></dt-zhezao>
-        </div>
 
     </div>
 </template>
@@ -69,8 +64,7 @@
 
 
 import DtCom from './DtCom.vue';
-import DtZhezao from './DtZhezao.vue'
-import { constants } from 'fs';
+
 
 export default {
 
@@ -78,62 +72,41 @@ export default {
         return {
             active1 : false,
             active2 : false,
-
-            zezhaoCon1 : {
-                code : 1,
-                top : "100%",
-                data : ''
-            },
         }
     },
-
-
-
+    
     computed : {
         dates(){
             return this.$store.getters.detailGoods;
         },
 
-        dataA(){
-            return {
-                postPromotionName : this.dates.postPromotionName
-            }
-        },
-
-        dataB(){
-            return {
-                //图片
-                thumbnail : this.dates.thumbnail,
-                //库存
-                stock : this.dates.specValues[0].stock,
-                //规格
-                specValue : this.dates.specValues[0].specValue,
-                //销售价格
-                xsPrice : this.dates.specValues[0].xsPrice
-            }
-        }
     },
 
     components : {
         DtCom,
-        DtZhezao
+
     },
 
 
     methods : {
         zheZao(val){
             if(val == 1){
-                this.zezhaoCon1.code = 1;
-                this.zezhaoCon1.data = this.dataA;
-            }else if(val == 2){
-                this.zezhaoCon1.code = 2;
-                this.zezhaoCon1.data = this.dataB;
-            }
-            this.zezhaoCon1.top = "0";
+                
+                this.$store.commit('updateCode',{
+                    code : 1,
+                    top : "0%"
+                });
 
-        },
-        doSomething(){
-            this.zezhaoCon1.top = "100%";
+
+            }else if(val == 2){
+
+                this.$store.commit('updateCode',{
+                    code : 2,
+                    top : "0%"
+                });
+
+            }
+
         }
     }
 

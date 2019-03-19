@@ -3,6 +3,7 @@
         <DtHeader></DtHeader>
         <div class="comRe">
             <component :is="compName"></component>
+            <dt-zhezao></dt-zhezao>
         </div>
         <dt-foot></dt-foot>
     </div>
@@ -15,13 +16,9 @@ import Dtgoods from '../components/Dtgoods.vue';
 import DtInfo from '../components/DtInfo.vue';
 import DtCom from '../components/DtCom.vue';
 import DtFoot from '../components/DtFoot.vue';
+import DtZhezao from '../components/DtZhezao.vue'
 
 export default {
-    data(){
-        return {
-
-        }
-    },
 
     computed : {
         compName(){
@@ -35,7 +32,8 @@ export default {
         Dtgoods,
         DtInfo,
         DtCom,
-        DtFoot
+        DtFoot,
+        DtZhezao
     },
 
     created(){

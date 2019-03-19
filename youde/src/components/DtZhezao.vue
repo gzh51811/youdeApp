@@ -1,37 +1,37 @@
 <template>
-    <div class="all" ref="all" :style="{top : contents.top}">
+    <div class="all" ref="all" :style="{top : top}">
 
         <div class="ztop" ref='ztop'></div>
         <div class="zbottom" ref='zbottom'>
-            <div v-if="contents.code == 1">
+            <div v-if="code == 1">
                 <div style="line-height:60px;font-size:24px;text-align:center;padding-right:8%;border-bottom:1px solid #ccc;">
                     促销活动
                     <i class="icon iconfont icon-2guanbi" style="float:right"  @click.stop='close' ></i>
                 </div>
                 <div style="line-height:46px;height:46px;font-size:15px;border-bottom:1px solid #ccc">
-                     {{contents.data.postPromotionName}}
+                     {{contents.postPromotionName}}
                      <span style="display:inline-block;height:24px;
                             border:1px solid #ccc;line-height:24px;
                             float:left;padding:0 10px;border-radius:3px;
                             background:#ccc;color:white;margin:10px;
                             ">
-                         {{contents.data.postPromotionName}}
+                         {{contents.postPromotionName}}
                      </span>
                 </div>
             </div>
-            <div  v-if="contents.code == 2" style="padding-top:10px;" class="xl">
+            <div  v-if="code == 2" style="padding-top:10px;" class="xl">
                  <div style="height : 90px; ">
-                     <img :src="contents.data.thumbnail" style="float: left;height:90px;">
+                     <img :src="contents.thumbnail" style="float: left;height:90px;">
                      <div style="float : left">
-                        <p>￥{{(contents.data.xsPrice/100).toFixed(2)}}</p><br>
-                        <p>库存{{contents.data.stock}}件</p>
+                        <p>￥{{(contents.xsPrice/100).toFixed(2)}}</p><br>
+                        <p>库存{{contents.stock}}件</p>
 
                         <div>
                             <p style="float : left;">购物数量：</p>                            
                             <ul style="display:flex; float:left;height:24px; line-height:24px;">
                                 <li @click="sub" :class="{disable : num<=0}"><i class="icon iconfont icon-jian"></i></li>
                                 <li>{{num}}</li>
-                                <li @click="add" ref='add' :class="{disable : num>=contents.data.stock}"><i class="icon iconfont icon-jia"></i></li>
+                                <li @click="add" ref='add' :class="{disable : num>=contents.stock}"><i class="icon iconfont icon-jia"></i></li>
                             </ul>
                         </div>
 
@@ -46,7 +46,7 @@
                 <p style="padding-left:8px;">规格</p><br>
                 <p style="padding:4px 10px;border:1px solid #ccc;
                 margin-left:10px;"
-                >{{contents.data.specValue}}</p>
+                >{{contents.specValue}}</p>
             </div>
         </div>
 
@@ -60,17 +60,34 @@ export default {
             disabled : false
         }
     },
+
+    computed : {
+        //遮罩类型
+        code(){
+           return this.$store.getters.code; 
+        },
+        //遮罩出现或消失
+        top(){
+            return this.$store.getters.top;
+        },
+
+        contents(){
+            return this.$store.getters.zhezao;
+        }
+    },
     
-    props : ['contents'],
 
     methods : {
         close(){
-            this.$emit('myevent');
+            this.$store.commit('updateCode',{
+                    code : 2,
+                    top : "100%"
+            });
         },
 
         add(){
             if(this.contents){
-                if(this.num >= this.contents.data.stock){
+                if(this.num >= this.contents.stock){
                     return;
                 }else{
                     this.num++;
