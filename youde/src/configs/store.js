@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { stat } from 'fs';
+
 
 Vue.use(Vuex);
 
@@ -19,25 +19,28 @@ const store = new Vuex.Store({
             return state.detailInfo;
         },
 
-
         //详情页图片数组
         urls(state){
-            var imgSrc = state.detailInfo.pictures.map(item => {
-                return item.pictureUrl;
-            });
-            return imgSrc;
+            if(state.detailInfo){
+                var imgSrc = state.detailInfo.pictures.map(item => {
+                    return item.pictureUrl;
+                });
+                return imgSrc;
+            }
         },
 
         //详情页评论数据
         commonds(state){
-            return state.detailInfo.spComments.map(item => {
-                return {
+            if(state.detailInfo){
+                return state.detailInfo.spComments.map(item => {
+                    return {
                         createTime : item.createTime,
                         commentAccount : item.commentAccount,
                         commentContent : item.commentContent,
                         descgrade : item.descgrade                
                     }
-            })
+                })
+            }
         }
 
     },

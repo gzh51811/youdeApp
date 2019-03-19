@@ -1,11 +1,11 @@
 <template> 
 
     <div>
-        <i></i>
+        <i class="icon iconfont icon-back" @click="back"></i>
         <ul>
             <li v-for="(item,idx) in navs" :key='item.text' @click.stop="chooseCom(item.compName,idx)" :class="{active : activeIdx==idx}">{{item.text}}</li>
         </ul>
-        <i></i>
+        <i class="icon iconfont icon-star-empty"></i>
     </div>
 </template>
 <script>
@@ -38,6 +38,10 @@ export default {
         chooseCom(name,idx){
             this.$store.commit('changeCompName',name);
             this.activeIdx = idx;
+        },
+
+        back(){
+            window.history.back();
         }
     }
 }
@@ -63,6 +67,10 @@ div{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    i{
+        font-size: .5rem;
+    }
     
     ul{
         width: 4.6rem;
@@ -71,6 +79,7 @@ div{
         text-align: center;
         border: 1px solid #6ea0da;
         border-radius: 3px;
+        margin:0 1.5rem;
 
         li{
             flex: 1;

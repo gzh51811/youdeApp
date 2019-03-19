@@ -4,11 +4,11 @@
     <div class="item" v-for="data in datas" :key="data.createTime">
         <div class="top">
             <div class="dtComLeft">
-                <img src="" alt="">
-                <p>{{data.commentAccount}}</p>
+                <img src="../assets/headImg.e7eb358.png" alt="">
+                <span>{{data.commentAccount}}</span>
             </div>
-            <div class="dtComRight" v-for="i in data.descgrade" :key='i'>
-                <i></i>
+            <div class="dtComRight">
+                <i class="icon iconfont icon-star on" v-for="i in data.descgrade" :key='i'></i>
             </div>
         </div><br>
         <p>{{data.commentContent}}</p><br><br>
@@ -32,19 +32,23 @@ export default {
         padding: 2.5%;
         margin-bottom: 2.5%;
         div.top{
-            display: flex;
+            overflow: hidden;
+            line-height: 36px;
             .dtComLeft{
-                flex: 2;
+                float: left;
                 img{
                     width: 36px;
                     height: 36px;
                 }
-                p{
+                span{
                     line-height: 36px;
                 }
             }
             .dtComRight{
-                flex: 1;
+                float: right;
+                i{
+                    padding : 0;
+                }
             }
         }
     }

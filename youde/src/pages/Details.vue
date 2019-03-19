@@ -4,10 +4,7 @@
         <div class="comRe">
             <component :is="compName"></component>
         </div>
-        <!-- <div class="foot"> -->
-            <dt-foot></dt-foot>
-        <!-- </div> -->
-        
+        <dt-foot></dt-foot>
     </div>
 </template>
 
@@ -44,17 +41,14 @@ export default {
     created(){
         var {goodsId} = this.$route.query;
         var _this = this;
-        console.log(goodsId);
         this.$axios.get('http://10.3.137.157:3000/goodsDetail',{
             params:{
                 goodsId
             }
         }).then(function(res){
-
-            //可取消
-            console.log(res.data[0].data);
-
-            _this.$store.commit('updateDetailInfo',res.data[0].data);
+            if(res.data[0]){
+                _this.$store.commit('updateDetailInfo',res.data[0].data);
+            }
 
         }).catch(function(error){
             console.log("error : " + error);
@@ -77,7 +71,6 @@ export default {
     }
 
 }
-
 
 </style>
 
