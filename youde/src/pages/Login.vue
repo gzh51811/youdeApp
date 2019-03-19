@@ -15,6 +15,9 @@
             Xheader,
             Dlloginform,
             Dltoreg
+        },
+        created(){
+           
         }
     }
 </script>

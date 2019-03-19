@@ -16,10 +16,10 @@
                 let distance = -(document.documentElement.scrollTop - 0) / 4;
                 this.timer = setInterval(() => {
                     document.documentElement.scrollBy(0, distance);
-                }, 500);
+                }, 200);
                 setTimeout(() => {
                     clearInterval(this.timer);
-                }, 2200);
+                }, 1000);
             },
             handleScroll() {
                 if (document.documentElement.scrollTop > 50) {

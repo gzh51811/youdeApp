@@ -34,13 +34,15 @@ const store = new Vuex.Store({
             if(state.detailInfo){
                 return state.detailInfo.spComments.map(item => {
                     return {
-                        createTime : item.createTime,
-                        commentAccount : item.commentAccount,
-                        commentContent : item.commentContent,
-                        descgrade : item.descgrade                
-                    }
+                            createTime : item.createTime,
+                            commentAccount : item.commentAccount,
+                            commentContent : item.commentContent,
+                            descgrade : item.descgrade
+                        }
                 })
             }
+
+
         }
 
     },
