@@ -10,7 +10,7 @@
             </div>
             <div data-v-38a122bc="" class="fr signIn">
                 <div data-v-38a122bc="">
-                    <span data-v-38a122bc="" class="signBtn fl">签到送积分</span>
+                    <span data-v-38a122bc="" class="signBtn fl" v-show="!isok" @click="show">{{text}}</span>
                     <span data-v-38a122bc="" class="signTag fl">?</span>
                 </div>
             </div>
@@ -22,9 +22,27 @@ export default {
     props:["nicheng"],
     data(){
         return{
-
+            isok:false,
+            text:""  
         }
     },
+    methods:{
+       show(){
+                this.text = "今日已签到"        
+           }
+       },
+    created(){
+          let username = localStorage.getItem("username");
+         if(username){
+             this.text = "签到"
+         }else{
+             this.text = "签到送积分"
+         }
 
-}
+    }
+       
+          
+
+    }
+
 </script>

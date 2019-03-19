@@ -88,4 +88,7 @@ export default {
 span {
   color: white;
 }
+.mint-toast.is-placemiddle{
+  top:40%;
+}
 </style>
