@@ -1,7 +1,7 @@
 <template>
-<div>
+<div :v-if="datas">
 
-    <div class="item" v-for="data in datas" :key="data.createTime">
+    <div class="item"  v-for="data in datas" :key="data.createTime">
         <div class="top">
             <div class="dtComLeft">
                 <img src="../assets/headImg.e7eb358.png" alt="">
@@ -18,9 +18,14 @@
 </template>
 <script>
 export default {
-    data(){
-        return {
-            datas : this.$store.getters.commonds
+
+    computed:{
+        datas(){
+            if(this.$store.getters.commonds){
+                return this.$store.getters.commonds;
+            }else{
+                return false;
+            }
         }
     }
 }

@@ -27,6 +27,7 @@ const store = new Vuex.Store({
         top : "100%",
 
 
+
     },
     getters:{
 
@@ -76,7 +77,7 @@ const store = new Vuex.Store({
 
         //详情页评论数据
         commonds(state){
-            if(state.detailInfo){
+            if(state.detailInfo.spComments){
                 return state.detailInfo.spComments.map(item => {
                     return {
                             createTime : item.createTime,

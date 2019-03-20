@@ -58,6 +58,7 @@
 </template>
 <script>
 import qs from 'qs';
+import { constants } from 'fs';
 
 export default {
     data(){
@@ -85,18 +86,19 @@ export default {
 
     methods : {
         check(){
-            // if(this.num == 0 ){return}
-            this.$axios.post('http://localhost:3000/cart',
-                    qs.stringify({
-                    nums : this.num,
-                    username :localStorage.getItem('username'),
-                    goodsId : this.$route.query.goodsId
-                    })
-            ).then(res => {
-                this.$store.dispatch('setgoodslist',res.data);
-                this.close();
-            });
-
+            if(this.num >=1){
+                this.$axios.post('http://localhost:3000/cart',
+                        qs.stringify({
+                        nums : this.num,
+                        username :localStorage.getItem('username'),
+                        goodsId : this.$route.query.goodsId
+                        })
+                ).then(res => {
+                });
+            }
+            this.close();
+            this.$store.dispatch('setgoodslist',res.data);      
+           
         },
 
         close(){
