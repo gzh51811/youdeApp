@@ -64,5 +64,7 @@
     }
 </script>
 <style scoped>
-
+.section{
+    padding-bottom: 20px;
+}
 </style>

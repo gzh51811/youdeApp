@@ -13,6 +13,7 @@
         props : ['title'],
         methods:{
             back(){
+                
                 this.$router.back();
             }
         }

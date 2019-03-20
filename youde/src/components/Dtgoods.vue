@@ -3,7 +3,6 @@
 
 
     <div class="allDt" v-if='dates'>
-
         <el-carousel :interval="2000" >
             <el-carousel-item v-for="item in dates.pictures" :key="item.id">
                 <h3>

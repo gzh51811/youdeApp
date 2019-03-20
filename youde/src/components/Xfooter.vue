@@ -70,9 +70,17 @@
         },
         methods: {
             goto(name) {
-                this.$router.push({name});
-            }
-        }
+                  let username = localStorage.getItem("username");
+                  console.log(username == "");
+                  console.log(name);
+                  this.$router.push({name}) 
+            },
+        
+        },
+        //   created(){
+        //          let username = localStorage.getItem("username");
+        //         console.log(usernmae);
+        //   } 
 
     }
 </script>

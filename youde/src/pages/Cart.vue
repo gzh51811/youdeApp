@@ -22,6 +22,12 @@
         components : {
             GwcHeader,
             Gwccontent
+        },
+        created(){
+            let username = localStorage.getItem('username');
+            if(!username){
+                this.$router.push({name:'mine'});
+            }
         }
     }
 </script>
