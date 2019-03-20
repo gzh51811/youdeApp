@@ -94,9 +94,8 @@ export default {
                         goodsId : this.$route.query.goodsId
                         })
                 ).then(res => {
-            this.close();      
-            this.$store.dispatch('setgoodslist',res.data);
-
+                        this.close();      
+                        this.$store.dispatch('setgoodslist',res.data);
                 });
             }
           

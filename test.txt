@@ -1,0 +1,20 @@
+卷 系统 的文件夹 PATH 列表
+卷序列号为 DCB0-0B1D
+C:.
+├─.idea
+├─nodes
+│  ├─bin
+│  ├─public
+│  │  ├─images
+│  │  ├─javascripts
+│  │  └─stylesheets
+│  ├─routes
+│  └─views
+└─youde
+    ├─public
+    └─src
+        ├─assets
+        ├─components
+        ├─configs
+        ├─pages
+        └─stylesheets

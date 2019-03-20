@@ -6,7 +6,7 @@
         <span data-v-35c3340a class="cartTitle">优德电商平台</span>
       </div>
       <ul data-v-35c3340a>
-        <li data-v-35c3340a class="listItem" v-for="(item,idx) in cartlist" :key="item.data.id">
+        <li data-v-35c3340a class="listItem" v-for="(item,idx) in cartlist" :key="item.data.id" @click="gotogoods(item.data.id)">
           <div data-v-35c3340a class="listItemContainer">
             <div data-v-35c3340a class="checkBox">
               <label data-v-35c3340a :class="{active:arr[idx]}" @click.stop="show(idx)">
@@ -214,6 +214,10 @@ export default {
               });
 
         }
+    },
+    gotogoods(id){
+      // console.log(id);
+       this.$router.push({name:"details",query:{goodsId:id}});
     }
   },
   created() {
