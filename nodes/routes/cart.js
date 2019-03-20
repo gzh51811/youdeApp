@@ -15,22 +15,20 @@ router.post('/', async function(req, res, next) {
     }else{
         let addlist = await db.insert("cart",{goodsId,username,"qty":nums});
     }
-    let list2 = await db.find("cart",{username});
-    let idlist =[]
-        for(let i=0;i<list2.length;i++){
-            idlist.push(list2[i].goodsId);
-        }
-
-     let goods = await  db.find("goods",{});
-        // console.log(goods[0]);
-    // for(let i =0; i<goods.length;i++){
-
-    // }
-    let newList = goods.filter((item)=>{
-        return  idlist.indexOf(item.data.id)>=0;
-    })
- 
-            res.send(newList);
+         let list2 = await db.find("cart",{username});
+    // let idlist =[]
+    //     for(let i=0;i<list2.length;i++){
+    //         idlist.push(list2[i].goodsId);
+    //     }
+    //  let goods = await  db.find("goods",{});
+    //  let newList = []
+    //     for(let i = 0 ; i < goods.length; i++){
+    //         let idx = idlist.indexOf(goods[i].data.id);
+    //             if(idx>=0){
+    //                 newList[idx]=goods[i];
+    //             }
+    //     }
+            res.send(list2);
 
 });
 
@@ -66,11 +64,15 @@ router.post("/goodslist",async (req,res,next)=>{
     // for(let i =0; i<goods.length;i++){
 
     // }
-    let newList = goods.filter((item)=>{
-        return  idlist.indexOf(item.data.id)>=0;
-    })
- 
-            res.send(newList);
+    let newList = []
+    for(let i = 0 ; i < goods.length; i++){
+        let idx = idlist.indexOf(goods[i].data.id);
+            if(idx>=0){
+                newList[idx]=goods[i];
+            }
+    }
+        res.send(newList);
+
 })
 
 router.post('/add', async function(req, res, next) {
@@ -79,7 +81,7 @@ router.post('/add', async function(req, res, next) {
     let list = await db.find("cart",{goodsId,username});
     if(list.length>0){
        
-       let qty = list[0].qty + 1;     
+       let qty = list[0].qty*1 + 1;     
         let addqty = await db.update("cart",{goodsId,username},{qty});
     }else{
         let addlist = await db.insert("cart",{goodsId,username,"qty":1});
@@ -124,9 +126,13 @@ router.post('/remove', async function(req, res, next) {
             }
 
             let list2 = await db.find("goods",{})  
-            let cartlist = list2.filter((item)=>{
-                return  list.indexOf(item.data.id)>=0;
-            })
+            let cartlist = []
+    for(let i = 0 ; i < list2.length; i++){
+        let idx = list.indexOf(list2[i].data.id);
+            if(idx>=0){
+                cartlist[idx]=list2[i];
+            }
+    }
             // console.log(cartlist,goodslist);
             res.send({
                 cartlist,

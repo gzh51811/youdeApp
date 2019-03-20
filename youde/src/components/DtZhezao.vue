@@ -85,6 +85,7 @@ export default {
 
     methods : {
         check(){
+            // if(this.num == 0 ){return}
             this.$axios.post('http://localhost:3000/cart',
                     qs.stringify({
                     nums : this.num,
@@ -92,6 +93,7 @@ export default {
                     goodsId : this.$route.query.goodsId
                     })
             ).then(res => {
+                this.$store.dispatch('setgoodslist',res.data);
                 this.close();
             });
 

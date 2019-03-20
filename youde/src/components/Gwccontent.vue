@@ -196,7 +196,7 @@ export default {
                goodsarr.push(this.cartlist[this.newarr[i]].data.id)     
 
               }
-              console.log(goodsarr,this.goodslist);
+              // console.log(goodsarr,this.goodslist);
               let len = goodsarr.length
               this.$axios.post("http://localhost:3000/cart/remove",
               qs.stringify({
@@ -205,7 +205,7 @@ export default {
               })
               
               ).then(res=>{
-                console.log(res);
+                // console.log(res);
                   this.$store.dispatch("setcartlist",res.data.cartlist);
                   this.$store.dispatch("setgoodslist",res.data.goodslist);
                   this.arr =[];
@@ -260,5 +260,8 @@ export default {
 
 .cartFixedBtm .cartFixedRight span {
   margin-right: 35px;
+}
+.cartList li:nth-last-child(1){
+    margin-bottom: 50px;
 }
 </style>

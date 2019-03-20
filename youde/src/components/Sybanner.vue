@@ -118,7 +118,7 @@
                 this.bannerInterval();
             },
             getWidth() {
-               console.log(document.documentElement.clientWidth)
+            //    console.log(document.documentElement.clientWidth)
             }
         },
         mounted() {
