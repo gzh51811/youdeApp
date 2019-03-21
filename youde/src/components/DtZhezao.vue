@@ -86,6 +86,12 @@ export default {
 
     methods : {
         check(){
+              let username = localStorage.getItem("username");
+
+            if(!username){
+                this.$router.push({name:"login"});
+                return;
+            }
             if(this.num >=1){
                 this.$axios.post('http://localhost:3000/cart',
                         qs.stringify({
